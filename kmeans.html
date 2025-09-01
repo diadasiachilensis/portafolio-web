@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1: Título del Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Diadasia chilensis</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#portfolio">Portafolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="project-details">
+            <h2>Clustering con K-Means: Ejercicio de Segmentación y Análisis de Datos</h2>
+
+            <!-- Nueva disposición con imagen izquierda y texto a la derecha -->
+            <div class="intro-section">
+                <img src="images/proyecto_kmeans.png" alt="Visualización representativa del proyecto K-Means">
+            
+                <div class="intro-text">
+                    <h3>Resumen</h3>
+                    <p>
+                        Este proyecto aplica <strong>K-Means</strong>, un algoritmo de <em>aprendizaje no supervisado</em>, 
+                        para segmentar estudiantes según sus niveles de estrés y factores asociados. 
+                        Tras la limpieza y estandarización de los datos, se realizó un análisis exploratorio y se evaluaron distintos valores de 
+                        <em>k</em> mediante el método del codo, coeficiente silhouette y matriz de confusión. 
+                        Los resultados mostraron que <strong>k=4</strong> ofrece el mejor equilibrio, 
+                        con perfiles bien diferenciados que permiten comprender patrones relevantes en el bienestar estudiantil 
+                        y facilitan el diseño de intervenciones más focalizadas.
+                    </p>
+                
+                    <h3>Objetivo de investigación</h3>
+                    <p>
+                        Categorizar perfiles de estudiantes según sus niveles de estrés 
+                        mediante técnicas de clustering (K-means), con el fin de comprender los factores psicológicos, 
+                        sociales y académicos que inciden en su bienestar.
+                    </p>
+                
+                    <h3>Pregunta de investigación</h3>
+                    <p>
+                        ¿De qué manera se modifican la estructura, consistencia y capacidad explicativa de los clústeres de estudiantes 
+                        al aplicar diferentes valores de k (k=3, k=4, k=5) en el algoritmo K-Means, en relación con los factores psicológicos, 
+                        sociales y académicos asociados a sus niveles de estrés?
+                    </p>
+                </div>
+            </div>
+
+            <h3>Resultados e Impacto</h3>
+            <p>
+                El análisis permitió identificar patrones relevantes en los niveles de estrés de los estudiantes y su relación con factores psicológicos, sociales y académicos. A continuación se muestran las visualizaciones obtenidas, acompañadas de su interpretación:
+            </p>
+            <figure>
+                <figcaption>
+                    <strong>Distribución de variables escaladas:</strong> antes de aplicar K-Means se realizó un proceso de estandarización, lo que permitió que todas las variables 
+                    quedaran en una escala comparable (media cercana a 0 y dispersión controlada). 
+                    Este paso asegura que ninguna variable domine el análisis por diferencias en magnitud, 
+                    y facilita que el algoritmo de clustering identifique patrones basados en las relaciones reales entre factores psicológicos, sociales y académicos.
+                </figcaption>
+                <img src="images/boxplots_scaled.png" alt="Distribución de variables tras escalar datos" width="1000"/>
+            </figure>
+            <!-- 3. Método del Codo -->
+            <figure>
+                <figcaption>
+                    <strong>Método del codo:</strong> permitió evaluar distintos valores de k para el algoritmo K-Means, sugiriendo que k=3 y k=4 es un punto adecuado de segmentación inicial.
+                </figcaption>
+                <img src="images/elbow_method.png" alt="Método del codo para determinar k" />
+
+            </figure>
+
+            <!-- 4. Coeficiente Silhouette -->
+            <figure>
+                <figcaption>
+                    <strong>Coeficiente Silhouette:</strong> confirmó la calidad de los clústeres y sirvió de apoyo para seleccionar la cantidad óptima de grupos en el análisis.
+                </figcaption>
+                <img src="images/silhouette.png" alt="Evaluación con coeficiente silhouette" />
+            </figure>
+
+            <!-- 5. Gráfico de clústeres con k=3 -->
+            <figure>
+                <figcaption>
+                    <strong>Clústeres con k=3:</strong> segmentación de estudiantes en tres perfiles diferenciados, donde se identifican diferencias notables en factores psicológicos y académicos.
+                </figcaption>
+                <img src="images/clusters_k3.png" alt="Clústeres con K=3" />
+            </figure>
+
+            <!-- 8. Matriz de confusión -->
+            <figure>
+                <figcaption>
+                    <p>
+                    <strong>La matriz de confusión: </strong> se utilizó para evaluar si los clústeres generados por <strong>K-Means</strong> coincidían con la segmentación original del dataset en los grupos de niveles de estrés. 
+                    Este análisis permitió comparar directamente las etiquetas de los clústeres con las categorías reales, validando así la coherencia del modelo y evidenciando hasta qué punto el algoritmo reproduce la clasificación existente. 
+                    De esta forma, se comprobó la calidad de la segmentación y se destacó la utilidad del clustering como técnica de apoyo para el estudio de los factores asociados al bienestar estudiantil.
+                    </p>
+                    <p>
+                        La matriz de <strong>K-Means k=3</strong> mostró un <strong>87% de exactitud</strong>, diferenciando bien los niveles de estrés aunque con cierta confusión entre <em>estrés medio y alto</em>. 
+                        Esto valida la capacidad del algoritmo para captar patrones, pero también sugiere que técnicas más flexibles podrían mejorar la separación.
+                    </p>
+                </figcaption>
+                <img src="images/confusion_matrix.png" alt="Matriz de confusión entre niveles de estrés y clústeres" />
+            </figure>
+
+            
+            <!-- 1. Distribución de la variable objetivo -->
+            <figure>
+                <figcaption>
+                    <strong>Distribución de niveles de estrés:</strong> 
+                    Los tres clusters muestran perfiles coherentes con niveles bajo, medio y alto de estrés. 
+                    El Cluster 1 concentra a estudiantes con condiciones más saludables, mientras que el Cluster 0 refleja 
+                    un grupo intermedio con alta ansiedad pero aún con entornos protectores. Finalmente, 
+                    el Cluster 2 agrupa a quienes enfrentan mayor vulnerabilidad emocional y social, 
+                    lo que coincide con los resultados de la matriz de confusión, donde la mayor confusión se dio 
+                    entre los niveles medio y alto, ya que comparten varias variables críticas.
+                </figcaption>
+                <img src="images/stress_distribution.png" alt="Distribución de niveles de estrés" />
+            </figure>
+
+            <!-- 6. Gráfico de clústeres con k=4 -->
+            <figure>
+                <figcaption>
+                    <strong>Clústeres con k=4:</strong> una división más detallada que permite observar subgrupos con patrones específicos, aunque con menor cohesión en algunos segmentos.
+                </figcaption>
+                <img src="images/clusters_k4.png" alt="Clústeres con K=4" />
+            </figure>
+
+            <!-- 7. Gráfico de clústeres con k=5 -->
+            <figure>
+                <figcaption>
+                    <strong>Clústeres con k=5:</strong> proporciona una segmentación aún más granular, pero con riesgo de sobreajuste, lo que evidencia la importancia de balancear interpretabilidad y precisión.
+                </figcaption>
+                <img src="images/clusters_k5.png" alt="Clústeres con K=5" />
+            </figure>
+
+            <p>
+                En conjunto, los resultados muestran que el uso de <strong>K-Means</strong> permitió categorizar perfiles de estudiantes en función de variables psicológicas, sociales y académicas, facilitando la interpretación de factores que inciden directamente en su bienestar. Este análisis puede servir de base para diseñar estrategias de apoyo focalizadas en los grupos más vulnerables.
+            </p>
+
+            <h3>Conclusión Final</h3>
+            <p>
+                La matriz de confusión se utilizó para evaluar si los clústeres generados por <strong>K-Means</strong> coincidían con la segmentación original del dataset en los grupos de niveles de estrés. 
+                Este análisis permitió comparar directamente las etiquetas de los clústeres con las categorías reales, validando así la coherencia del modelo y evidenciando hasta qué punto el algoritmo reproduce la clasificación existente. 
+                De esta forma, se comprobó la calidad de la segmentación y se destacó la utilidad del clustering como técnica de apoyo para el estudio de los factores asociados al bienestar estudiantil.
+            </p>
+
+            <h3>Reflexión / Aprendizajes</h3>
+                <p>
+                Este proyecto fue clave para comprender en profundidad el funcionamiento de <strong>K-Means</strong> como algoritmo de <em>aprendizaje no supervisado</em>, 
+                en el que los datos se agrupan en clústeres sin necesidad de etiquetas previas. 
+                Lo que salió bien fue la correcta estandarización de las variables y la aplicación de métricas como el método del codo, silhouette y matriz de confusión, 
+                que validaron la calidad del modelo. 
+                Entre los aprendizajes más importantes destaca la necesidad de probar diferentes valores de <em>k</em> para encontrar la segmentación más coherente, 
+                y la constatación de que algunos grupos (como estrés medio y alto) presentan fronteras naturalmente difusas. 
+                Como mejora futura, se propone explorar otros algoritmos no supervisados, como <strong>DBSCAN</strong> o <strong>Gaussian Mixture Models</strong>, 
+                y reforzar el análisis con técnicas de <em>validación cruzada</em> para mejorar la robustez de los resultados.
+                </p>
+
+            <h3>Enlaces técnicos</h3>
+            <ul>
+                <li><a href="https://github.com/diadasiachilensis/data-science/tree/main/machine-learning/APRENDIZAJE-NO-SUPERVISADO/Modelos-de-Clustering/K-Means" target="_blank">Código en GitHub</a></li>
+                <li><a href="https://github.com/diadasiachilensis/data-science/blob/main/machine-learning/APRENDIZAJE-NO-SUPERVISADO/Modelos-de-Clustering/K-Means/Ejercicio_K_Means.ipynb" target="_blank">Notebook / Demo</a></li>
+            </ul>
+
+            <!-- Botón para regresar al portafolio -->
+            <p><a href="index.html#portfolio" class="btn">← Volver al portafolio</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Diadasia Chilensis. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

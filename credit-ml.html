@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Solvencia Crediticia mediante Técnicas de Machine Learning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Guillermo Vidal Astudillo</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#portfolio">Portafolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="project-details">
+            <h2>Proyecto 1: Análisis de Riesgo Crediticio con Regresión Lineal</h2>
+
+            <h3>Resumen</h3>
+            <p>
+                Este proyecto consistió en aplicar técnicas de análisis exploratorio de datos y modelado 
+                predictivo al dataset <strong>German Credit</strong>. El objetivo principal fue identificar variables 
+                relevantes en la evaluación de solvencia crediticia y construir un modelo de regresión lineal 
+                para predecir el riesgo asociado a los solicitantes de crédito.
+            </p>
+
+            <h3>Contexto / Problema</h3>
+            <p>
+                El dataset German Credit contiene información financiera y demográfica de solicitantes de crédito. 
+                El desafío fue analizar y modelar estos datos para comprender qué factores explican mejor 
+                la probabilidad de riesgo crediticio. Esta problemática es central en el sector bancario, 
+                ya que influye en la toma de decisiones de otorgamiento de préstamos.
+            </p>
+
+            <h3>Enfoque</h3>
+            <ul>
+                <li><strong>Limpieza de datos:</strong> tratamiento de valores nulos, codificación de variables categóricas.</li>
+                <li><strong>Análisis exploratorio:</strong> visualización de distribuciones, identificación de outliers y correlaciones.</li>
+                <li><strong>Modelado:</strong> entrenamiento de un modelo de <em>Regresión Lineal</em> usando Scikit-learn.</li>
+                <li><strong>Evaluación:</strong> métricas de desempeño <em>Mean Squared Error (MSE)</em> y <em>R²</em>.</li>
+            </ul>
+
+            <h3>Resultados e Impacto</h3>
+            <p>
+                El modelo permitió identificar las variables con mayor peso en la predicción del riesgo de crédito. 
+                Se obtuvo un desempeño satisfactorio, con valores de R² que indican capacidad explicativa del modelo. 
+                A continuación, se presentan algunas visualizaciones del análisis:
+            </p>
+            <div class="results-images">
+                <img src="images/histograma.png" alt="Histograma de variable principal" />
+                <img src="images/heatmap.png" alt="Mapa de calor de correlaciones" />
+                <img src="images/scatterplot.png" alt="Comparación predicciones vs valores reales" />
+            </div>
+
+            <h3>Reflexión / Aprendizajes</h3>
+            <p>
+                Este proyecto reforzó mis habilidades en preprocesamiento y exploración visual de datos. 
+                Una dificultad importante fue el tratamiento de datos faltantes y outliers, que afectaban la 
+                calidad del modelo. Como mejora futura, propondría aplicar modelos más robustos (ej. árboles 
+                de decisión, Random Forest, Gradient Boosting) y técnicas de validación cruzada para 
+                mejorar la capacidad predictiva.
+            </p>
+
+            <h3>Enlaces técnicos</h3>
+            <ul>
+                <li><a href="https://github.com/tu_usuario/solemne2" target="_blank">Repositorio en GitHub</a></li>
+                <li><a href="solemne2.ipynb" target="_blank">Notebook (Jupyter)</a></li>
+            </ul>
+
+            <!-- Botón para regresar al portafolio -->
+            <p><a href="index.html#portfolio" class="btn">← Volver al portafolio</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Guillermo Vidal. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
